@@ -21,7 +21,8 @@ double percentageFromValueInRange({required double min, max, value}) {
 }
 
 double borderDouble({required double minRange, maxRange, value}) {
-  if (value > maxRange) return maxRange;
-  if (value < minRange) return minRange;
+
+  if (value > maxRange) return double.parse(maxRange.toStringAsFixed(1));
+  if (value < minRange) return double.parse(minRange.toStringAsFixed(1));
   return value;
 }
